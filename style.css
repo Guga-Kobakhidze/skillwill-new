@@ -78,14 +78,6 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 40px;
-
-  @media (max-width: 1024px) {
-    padding: 0 20px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 16px;
-  }
 }
 
 .brand-button {
@@ -98,11 +90,6 @@ body {
   &:hover {
     opacity: 0.8;
   }
-
-  @media (max-width: 1024px) {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
 }
 
 .brands-section,
@@ -112,10 +99,6 @@ body {
 .footer-top-content {
   color: var(--primary-color);
   margin-bottom: 124px;
-
-  @media (max-width: 1024px) {
-    margin-bottom: 60px;
-  }
 }
 
 .logo-content {
@@ -125,11 +108,6 @@ body {
 
   img {
     object-fit: contain;
-  }
-
-  @media (max-width: 1024px) {
-    width: 80px;
-    height: 20px;
   }
 }
 
@@ -199,23 +177,6 @@ body {
       .burger-menu-content {
         display: none;
         color: white;
-      }
-    }
-  }
-
-  @media (max-width: 1024px) {
-    padding: 20px 0;
-
-    .header-menu-content {
-      gap: 20px;
-      flex-direction: row-reverse;
-
-      .header-navigation {
-        display: none;
-      }
-
-      .header-burger-menu {
-        display: block;
       }
     }
   }
@@ -303,23 +264,6 @@ body {
     max-width: 520px;
     color: var(--secondary-color);
   }
-
-  @media (min-width: 2500px) {
-    min-height: 100%;
-    padding: 100px 0;
-  }
-
-  @media (max-width: 1024px) {
-    min-height: 60dvh;
-  }
-
-  @media (max-width: 767px) {
-    .star-icon1,
-    .star-icon2,
-    .highlight-icon {
-      display: none;
-    }
-  }
 }
 
 /* Brands Section */
@@ -350,24 +294,14 @@ body {
       background-color: var(--brand-color);
       top: 50%;
       transform: translate(-50%, -50%);
-
-      @media (max-width: 767px) {
-        width: 20px;
-      }
     }
 
     &::before {
       left: -30%;
-      @media (max-width: 767px) {
-        left: -10%;
-      }
     }
 
     &::after {
       left: 130%;
-      @media (max-width: 767px) {
-        left: 110%;
-      }
     }
   }
 
@@ -448,12 +382,6 @@ body {
           height: 2px;
           background-color: var(--brand-color);
           z-index: -1;
-
-          @media (max-width: 767px) {
-            width: 98%;
-            left: 1px;
-            top: 16%;
-          }
         }
 
         &::after {
@@ -464,11 +392,6 @@ body {
           transform: translateY(-50%);
           z-index: -1;
           color: var(--brand-color);
-
-          @media (max-width: 767px) {
-            right: 2px;
-            top: 15.8%;
-          }
         }
       }
 
@@ -484,12 +407,6 @@ body {
 
         img {
           transition: transform 0.5s ease-in-out;
-        }
-
-        @media (max-width: 767px) {
-          width: 70px;
-          height: 70px;
-          padding: 16px;
         }
       }
 
@@ -590,10 +507,6 @@ body {
     font-weight: var(--font-bold);
     max-width: 600px;
     letter-spacing: -3px;
-
-    @media (max-width: 767px) {
-      letter-spacing: normal;
-    }
   }
 
   p {
@@ -615,10 +528,6 @@ body {
       height: 18px;
       transform: translateY(1.5px);
     }
-  }
-
-  @media (max-width: 1024px) {
-    padding: 40px 10px;
   }
 }
 
@@ -713,23 +622,178 @@ body {
       }
     }
   }
+}
 
-  @media (max-width: 767px) {
+@media (min-width: 2500px) {
+  .hero-section {
+    min-height: 100%;
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: 1235px) {
+  .topics-section .topics-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .topics-section .topics-list .topic {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .brand-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .brands-section,
+  .topics-section,
+  .how-we-work-section,
+  .became-partner-section,
+  .footer-top-content {
+    margin-bottom: 60px;
+  }
+
+  .logo-content {
+    width: 80px;
+    height: 20px;
+  }
+
+  .header-content {
+    padding: 20px 0;
+  }
+
+  .header-content .header-menu-content {
+    gap: 20px;
+    flex-direction: row-reverse;
+  }
+
+  .header-content .header-menu-content .header-navigation {
+    display: none;
+  }
+
+  .header-content .header-menu-content .header-burger-menu {
+    display: block;
+  }
+
+  .hero-section {
+    min-height: 60dvh;
+  }
+
+  .brands-section .brands-list {
+    padding: 34px 40px;
+    gap: 32px;
+  }
+
+  .how-we-work-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .how-we-work-section .grid-child {
+    margin: 0;
+  }
+
+  .how-we-work-section .how-we-work-content p {
+    font-size: 20px;
+  }
+
+  .became-partner-section {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-section .star-icon1,
+  .hero-section .star-icon2,
+  .hero-section .highlight-icon {
+    display: none;
+  }
+
+  .brands-section .brands-content::before,
+  .brands-section .brands-content::after {
+    width: 20px;
+  }
+
+  .brands-section .brands-content::before {
+    left: -10%;
+  }
+
+  .brands-section .brands-content::after {
+    left: 110%;
+  }
+
+  .brands-section .brands-list {
+    overflow: auto;
+    padding: 15px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .brands-section .brands-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .brands-section .brands-list .brand-logo {
+    width: 120px;
+  }
+
+  .topics-section .topics-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .topics-section .topics-list .topic {
+    max-width: 100%;
+  }
+
+  .topics-section .topics-list .topic .topic-arrow::before {
+    width: 98%;
+    left: 1px;
+    top: 16%;
+  }
+
+  .topics-section .topics-list .topic .topic-arrow::after {
+    right: 2px;
+    top: 15.8%;
+  }
+
+  .topics-section .topics-list .topic .topic-image {
+    width: 70px;
+    height: 70px;
+    padding: 16px;
+  }
+
+  .became-partner-section h1 {
+    letter-spacing: normal;
+  }
+
+  .footer-content {
     padding-top: 20px;
+  }
 
-    .footer-top-content {
-      margin-bottom: 20px;
-    }
+  .footer-content .footer-top-content {
+    margin-bottom: 20px;
+  }
 
-    .footer-bottom-content {
-      flex-direction: column;
-      align-items: start;
-      padding: 20px 0;
+  .footer-content .footer-bottom-content {
+    flex-direction: column;
+    align-items: start;
+    padding: 20px 0;
+  }
 
-      .footer-bottom-content-nav ul {
-        flex-direction: column;
-        align-items: start;
-      }
-    }
+  .footer-content .footer-bottom-content .footer-bottom-content-nav ul {
+    flex-direction: column;
+    align-items: start;
   }
 }
